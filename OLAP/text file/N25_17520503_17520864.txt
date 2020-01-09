@@ -1,0 +1,14 @@
+- Đề tài: Phân tích dữ liệu phim
+- Link dataset:  
+o https://grouplens.org/datasets/movielens/latest/
+
+- Đặng Văn Công Hoàng 17520503
+
+- Đỗ Minh Nhựt 17520864
+Phân công: Hoàng 60%, Nhựt 40%
+SSIS HOÀNG
+SSAS HOÀNG NHỰT
+SSRS NHỰT
+GOOGLE DATA STUDIO: HOÀNG
+DATA MINING HOÀNG
+BÁO CÁO NHỰT

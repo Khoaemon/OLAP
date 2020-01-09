@@ -1,0 +1,125 @@
+﻿//1: Số lượng phim theo từng collection.
+
+select non empty [Dim Movie].[Original Title].members on 1,  [Measures].[Fact Count]on 0
+from [Dwh4]
+
+
+
+
+//2: Tại mỗi quý trong năm 2014, liệt kê 3 hãng sản xuất phim có tổng doanh thu lớn nhât.
+
+select [Measures].[Revenue] on columns,
+generate(descendants([Dim Release Date].[Hierarchy_date].[Year].&[2014],[Dim Release Date].[Quarter]),
+topcount([Dim Release Date].[Quarter].currentmember 
+* [Dim Companies].[Company Name].[Company Name].children, 3 ,[Measures].[Revenue])) on rows
+from [Dwh4]
+
+//3: Thống kê doanh thu của từng xưởng phim qua ngày tháng năm.
+
+select non empty [Measures].[Revenue] on 0,
+non empty crossjoin([Dim Companies].[Company Name].[Company Name]
+,[Dim Release Date].[Year].children
+,[Dim Release Date].[Month].children
+,[Dim Release Date].[Date].children
+) on 1
+from [Dwh4]
+
+//4: Thống kê ngân sách của từng quốc gia qua ngày tháng năm.
+
+select non empty [Measures].[Budget] on 0,
+non empty crossjoin([Dim Companies].[Company Name].[Company Name]
+,[Dim Release Date].[Year].children
+,[Dim Release Date].[Month].children
+,[Dim Release Date].[Date].children
+) on 1
+from [Dwh4]
+
+//5: Cho biết những năm có số lượng bộ phim phát hành lớn hơn 100.
+
+select non empty [Measures].[Fact Count] on 0,
+[Dim Release Date].[Year].[Year] having [Measures].[Fact Count] > 100 on 1
+from [Dwh4]
+
+
+//6: Trả về 5 phim có ratings cao nhất.
+
+select non empty ([measures].[Weighted Rating]) on 0,
+	nonempty (topcount([Dim Movie].[Original Title].[Original Title]
+	,5
+	,[measures].[Weighted Rating])) on 1
+from [Dwh4]
+
+//7: Top những phim có lượt vote cao hơn 1000.
+
+select [Measures].[Vote Count] on 0,
+non empty filter([Dim Movie].[Original Title].children, [Measures].[Vote Count] >10000) on 1
+from [Dwh4]
+
+//8: Tổng những doanh thu và ngân sách của những thể loại xếp theo doanh thu.
+
+select non empty({[Measures].[Budget],[Measures].[Revenue]}) on 0 ,
+non empty
+(order ([Dim Genres].[Genres Name].[Genres Name],[Measures].[Revenue], desc))  on 1
+from [Dwh4]
+ 
+//9: Top 3 thể loại có lượt rating cao nhất thông qua từng quốc gia.
+
+select non empty [Measures].[Weighted Rating] on 0,
+non empty generate([Dim Countries].[Country Name].children,
+topcount(
+{[Dim Countries].[Country Name].currentmember * [Dim Genres].[Genres Name].[Genres Name].members
+}, 3 , [Measures].[Weighted Rating])
+) on 1
+from [Dwh4]
+
+//10: Top 3 nước có lượt rating cao nhất về phim ảnh.
+
+select [Measures].[Weighted Rating] on 0,
+topcount([Dim Countries].[Country Name].[Country Name],3,[Measures].[Weighted Rating]) on 1 
+from [Dwh4]
+
+//11: Thống kê 3 bộ phim có tổng doanh thu cao nhất do đạo diễn “James Cameron” đại diễn.
+
+select [Measures].[Revenue] on 0,
+non empty(
+subset(
+	order([Dim Movie].[Original Title].children,([Measures].[Revenue], [Dim Director].[Director Name].&[James Cameron]), desc
+	), 0 , 3)) on 1
+from [Dwh4]
+
+
+//12: Thống kê đánh giá các phim của từng quốc gia qua năm và quý
+
+select non empty{
+[Measures].[Weighted Rating]} on columns,
+non empty {
+([Dim Movie].[Original Title].[Original Title].allmembers 
+* [Dim Release Date].[Year].[Year].allmembers
+* [Dim Release Date].[Quarter].[Quarter].allmembers
+* [Dim Countries].[Country Name].[Country Name].allmembers
+)} on rows 
+from [Dwh4]
+
+
+//13: Doanh thu từng theo collection.
+
+select non empty [Dim Collection].[Collection Name].members on 1,  [Measures].[Revenue] on 0
+from [Dwh4]
+
+//14:  Thống kê tổng doanh thu của các hãng phim của mỗi năm qua các quý.
+
+select [Measures].[Revenue] on columns,
+nonempty(drilldownlevel([Dim Release Date].[Hierarchy_date].[Year])) on rows
+from [Dwh4]
+
+//15: Thống kê ngân sách trong quý 2 và quý 4 của năm 2012.
+
+SELECT [Measures].[Budget] ON COLUMNS,  
+   NON EMPTY (  
+   DRILLDOWNLEVEL(  
+       { [Dim Release Date].[Hierarchy_date].[Year].&[2012],
+           DESCENDANTS(  
+             { [Dim Release Date].[Hierarchy_date].[Quarter].[2], 
+              [Dim Release Date].[Hierarchy_date].[Quarter].[4]}, 
+              [Dim Release Date].[Hierarchy_date].[quarter])})) ON ROWS
+from [Dwh4]

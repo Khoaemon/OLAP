@@ -1,0 +1,131 @@
+﻿<DeploymentSnapshot xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0">
+  <Target>
+    <Database>ssas 1912 final</Database>
+    <Server>localhost</Server>
+    <ConnectionString>Data Source=localhost;Timeout=0</ConnectionString>
+  </Target>
+  <Options>
+    <TransactionalDeployment>false</TransactionalDeployment>
+    <PartitionDeployment>DeployPartitions</PartitionDeployment>
+    <RoleDeployment>DeployRolesRetainMembers</RoleDeployment>
+    <ProcessingOption>Default</ProcessingOption>
+    <OutputScript></OutputScript>
+    <ImpactAnalysisFile></ImpactAnalysisFile>
+    <ConfigurationSettingsDeployment>Deploy</ConfigurationSettingsDeployment>
+    <OptimizationSettingsDeployment>Deploy</OptimizationSettingsDeployment>
+    <WriteBackTableCreation>UseExisting</WriteBackTableCreation>
+  </Options>
+  <Snapshot>
+    <ObjectSnapshots>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.RelationalDataSource</Type>
+        <TimeStamp>vw/2zH4dhx/Z81lRv4oMw2+QyDM=12/23/2019 1:17:32 AM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dwh4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.DataSourceView</Type>
+        <TimeStamp>VQA1zOmdOb9hwv+UACziqmCRfmE=12/19/2019 6:34:40 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dwh4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>VdAsH3BvGwmFdkN7vYtOoEtjabQ=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Companies</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>3yTivtj8ldZLOqThm8ZYhPmyxhI=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Genres</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>KWStCxv78QyEdnV4mWLN7gWthHM=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Language</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Wt8era/VKFomMt7pFwGcoQopofA=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Movie</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>aJteaTp/REbKAUpd53HGK5tg5fE=12/19/2019 8:21:54 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Release Date</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>Ht32S1aBqfI5D89HeQa2fAyx80Y=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Collection</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>FcYoJ5u40xA1GftHCbLkSNPtES0=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Countries</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Dimension</Type>
+        <TimeStamp>OAYYyRAc4VtDjQQcI+p5xMeqtC0=12/19/2019 6:35:44 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dim Director</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Cube</Type>
+        <TimeStamp>VkjrhNMnRgzurYlG1ixpuIcHKzQ=12/23/2019 11:15:48 AM12/23/2019 4:48:01 AMdfufwQ7JFzIlJUWTkvvg9vyJshs=12/22/2019 7:05:04 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Dwh4</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.Role</Type>
+        <TimeStamp>qdSIxn3eqdTJ8rB6V208EYn0WFQ=12/20/2019 2:33:57 PM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>Role</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>93XWtUYQaKdRsa5sSbtLZjlfQ7I=12/23/2019 2:58:15 AM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>pred rating</String>
+        </ID>
+      </ObjectSnapshot>
+      <ObjectSnapshot>
+        <Type>Microsoft.AnalysisServices.MiningStructure</Type>
+        <TimeStamp>dKdhGc5jrUrRFLgxFTTEu/KPDCU=12/23/2019 4:19:09 AM12/23/2019 4:48:01 AM</TimeStamp>
+        <ID>
+          <String>pred_genres</String>
+        </ID>
+      </ObjectSnapshot>
+    </ObjectSnapshots>
+    <DatabaseSnapshot>
+      <Type>Microsoft.AnalysisServices.Database</Type>
+      <TimeStamp>YT9PoXHfa44ApO3X6CVLR2fVuC0=12/19/2019 6:34:12 PM12/23/2019 4:48:01 AM</TimeStamp>
+      <ID>
+        <String>ssas 1912 final</String>
+      </ID>
+    </DatabaseSnapshot>
+    <Granularity>Coarse</Granularity>
+  </Snapshot>
+  <AssemblyLocations />
+  <ProcessingComplete>true</ProcessingComplete>
+  <LastDeployed>2019-12-23T04:15:50.186667Z</LastDeployed>
+</DeploymentSnapshot>

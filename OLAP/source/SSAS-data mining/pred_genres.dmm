@@ -1,0 +1,323 @@
+﻿<MiningStructure xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ddl2="http://schemas.microsoft.com/analysisservices/2003/engine/2" xmlns:ddl2_2="http://schemas.microsoft.com/analysisservices/2003/engine/2/2" xmlns:ddl100_100="http://schemas.microsoft.com/analysisservices/2008/engine/100/100" xmlns:ddl200="http://schemas.microsoft.com/analysisservices/2010/engine/200" xmlns:ddl200_200="http://schemas.microsoft.com/analysisservices/2010/engine/200/200" xmlns:ddl300="http://schemas.microsoft.com/analysisservices/2011/engine/300" xmlns:ddl300_300="http://schemas.microsoft.com/analysisservices/2011/engine/300/300" xmlns:ddl400="http://schemas.microsoft.com/analysisservices/2012/engine/400" xmlns:ddl400_400="http://schemas.microsoft.com/analysisservices/2012/engine/400/400" xmlns:ddl500="http://schemas.microsoft.com/analysisservices/2013/engine/500" xmlns:ddl500_500="http://schemas.microsoft.com/analysisservices/2013/engine/500/500" xmlns:dwd="http://schemas.microsoft.com/DataWarehouse/Designer/1.0" dwd:design-time-name="9af912b0-1b6a-43c4-97c9-382e9f8e8ca7" xmlns="http://schemas.microsoft.com/analysisservices/2003/engine">
+  <ID>pred_genres</ID>
+  <Name>pred_genres</Name>
+  <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+  <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+  <Annotations>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:CaseTableName</Name>
+      <Value>dbo_fact</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowFriendlyNames</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramLayout</Name>
+      <Value>
+        <dds xmlns="">
+          <diagram fontclsid="{0BE35203-8F91-11CE-9DE3-00AA004BB851}" mouseiconclsid="{0BE35204-8F91-11CE-9DE3-00AA004BB851}" defaultlayout="MSDDS.Rectilinear" defaultlineroute="MSDDS.Rectilinear" version="7" nextobject="2" scale="100" pagebreakanchorx="0" pagebreakanchory="0" pagebreaksizex="0" pagebreaksizey="0" scrollleft="-9513" scrolltop="-6284" gridx="150" gridy="150" marginx="5000" marginy="5000" zoom="100" x="22104" y="17568" backcolor="16119285" defaultpersistence="2" PrintPageNumbersMode="3" PrintMarginTop="0" PrintMarginBottom="635" PrintMarginLeft="0" PrintMarginRight="0" marqueeselectionmode="0" mousepointer="0" snaptogrid="0" autotypeannotation="1" showscrollbars="0" viewpagebreaks="0" donotforceconnectorsbehindshapes="1" backpictureclsid="{00000000-0000-0000-0000-000000000000}">
+            <font>
+              <ddsxmlobjectstreamwrapper binary="010000009001153e0100065461686f6d61" />
+            </font>
+            <mouseicon>
+              <ddsxmlobjectstreamwrapper binary="6c74000000000000" />
+            </mouseicon>
+          </diagram>
+          <layoutmanager>
+            <ddsxmlobj />
+          </layoutmanager>
+          <ddscontrol controlprogid="DdsShapes.DdsObjectManagedBridge" tooltip="fact" left="20" top="0" logicalid="1" controlid="1" masterid="0" hint1="0" hint2="0" width="3039" height="5000" noresize="0" nomove="0" nodefaultattachpoints="0" autodrag="1" usedefaultiddshape="1" selectable="1" showselectionhandles="1" allownudging="1" isannotation="0" dontautolayout="0" groupcollapsed="0" tabstop="1" visible="1" snaptogrid="0">
+            <control>
+              <ddsxmlobjectstreaminitwrapper binary="000e0000df0b000088130000" />
+            </control>
+            <layoutobject>
+              <ddsxmlobj>
+                <property name="LogicalObject" value="dbo_fact" vartype="8" />
+              </ddsxmlobj>
+            </layoutobject>
+            <shape groupshapeid="0" groupnode="0" />
+          </ddscontrol>
+        </dds>
+      </Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:ShowRelationshipNames</Name>
+      <Value>false</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:UseDiagramDefaultLayout</Name>
+      <Value>true</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortLeft</Name>
+      <Value>-9513</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramViewPortTop</Name>
+      <Value>-6284</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingLeft</Name>
+      <Value>20</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramBoundingTop</Name>
+      <Value>0</Value>
+    </Annotation>
+    <Annotation>
+      <Name>http://schemas.microsoft.com/DataWarehouse/Designer/1.0:DiagramZoom</Name>
+      <Value>100</Value>
+    </Annotation>
+  </Annotations>
+  <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+  <State>Unprocessed</State>
+  <Source xsi:type="DataSourceViewBinding" dwd:design-time-name="6a3a8bb3-140a-41b3-b5ae-d6518a3afad2">
+    <DataSourceViewID>Dwh4</DataSourceViewID>
+  </Source>
+  <Columns>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="02d5abe4-b128-4ba8-ac43-7329cbe1d092">
+      <ID>Budget</ID>
+      <Name>Budget</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="3ec30ca8-48b9-407d-939e-33cb761ed74d">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="776503b4-16f6-4a00-826b-881ea8599264">
+            <TableID>dbo_fact</TableID>
+            <ColumnID>budget</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="47c3d98e-06fb-46d3-8ed3-a1fbe7574369">
+      <ID>Fact Id</ID>
+      <Name>Fact Id</Name>
+      <IsKey>true</IsKey>
+      <Type>Long</Type>
+      <Content>Key</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="82951bde-d08b-4c57-adc8-ae6b2dcfea37">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="6c4321d2-1552-466d-8988-cccc8c1e9667">
+            <TableID>dbo_fact</TableID>
+            <ColumnID>fact_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="e9260535-259a-4389-bfe8-ae6e8317ae09">
+      <ID>Genres Id</ID>
+      <Name>Genres Id</Name>
+      <Type>Long</Type>
+      <Content>Discrete</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="c022dcf1-a12b-4783-8a48-40ebe53af15b">
+          <DataType>Integer</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="5f9eae97-e4fb-4c3b-9b80-34a2e7b91ff4">
+            <TableID>dbo_fact</TableID>
+            <ColumnID>genres_id</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="38df208d-030e-426d-b429-98c910719bd6">
+      <ID>Popularity</ID>
+      <Name>Popularity</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="2a2baa86-39d5-4d24-8c18-6b69ebb9bdd4">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="e50b7fe2-a1a4-42ea-8bf0-0149a02ab526">
+            <TableID>dbo_fact</TableID>
+            <ColumnID>popularity</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="f0fc2e45-55c2-4692-b16b-3575ce0bc1d3">
+      <ID>Revenue</ID>
+      <Name>Revenue</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="cc67ef8f-8eb2-464a-8ed2-aad60a106f9f">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="74550df5-43da-431e-8ee2-34dd69c81e96">
+            <TableID>dbo_fact</TableID>
+            <ColumnID>revenue</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+    <Column xsi:type="ScalarMiningStructureColumn" dwd:design-time-name="515724a9-77e0-4d7c-88a6-71d988f71e42">
+      <ID>Vote Count</ID>
+      <Name>Vote Count</Name>
+      <Type>Double</Type>
+      <Content>Continuous</Content>
+      <KeyColumns>
+        <KeyColumn dwd:design-time-name="91b06b1c-45a3-42a9-8da9-b6b68974d5a4">
+          <DataType>Double</DataType>
+          <DataSize>-1</DataSize>
+          <Source xsi:type="ColumnBinding" dwd:design-time-name="8911a6d5-2f28-4f19-bf31-18e5efd9c872">
+            <TableID>dbo_fact</TableID>
+            <ColumnID>vote_count</ColumnID>
+          </Source>
+        </KeyColumn>
+      </KeyColumns>
+    </Column>
+  </Columns>
+  <MiningModels>
+    <MiningModel dwd:design-time-name="64f49595-4ceb-4999-a44f-be6180a3bd38">
+      <ID>genres_tree</ID>
+      <Name>genres_tree</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Decision_Trees</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="b91b7c73-493b-4b1c-a41f-e84144a8b87b">
+          <ID>Budget</ID>
+          <Name>Budget</Name>
+          <SourceColumnID>Budget</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="d7f584f1-f67e-4db9-94c9-c0c4e04e3215">
+          <ID>Fact Id</ID>
+          <Name>Fact Id</Name>
+          <SourceColumnID>Fact Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="1f2642d1-9c23-48db-b1c8-fc4692abdc74">
+          <ID>Genres Id</ID>
+          <Name>Genres Id</Name>
+          <SourceColumnID>Genres Id</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="009ae6c3-6c87-4489-9613-3f7a4f93324c">
+          <ID>Popularity</ID>
+          <Name>Popularity</Name>
+          <SourceColumnID>Popularity</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="cdd4ba1c-e989-4c2c-8710-e6db56b57c0f">
+          <ID>Revenue</ID>
+          <Name>Revenue</Name>
+          <SourceColumnID>Revenue</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+        <Column dwd:design-time-name="e24740ce-7d52-4c14-93ec-30fabfde63c6">
+          <ID>Vote Count</ID>
+          <Name>Vote Count</Name>
+          <SourceColumnID>Vote Count</SourceColumnID>
+          <ModelingFlags>
+            <ModelingFlag>REGRESSOR</ModelingFlag>
+          </ModelingFlags>
+        </Column>
+      </Columns>
+      <AllowDrillThrough>true</AllowDrillThrough>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="f6e021cd-bd30-4a64-922f-2cc01a5fc47f">
+      <ID>genres_cluster</ID>
+      <Name>genres_cluster</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Clustering</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="d14bc4db-b1cd-47d7-8e18-8d44e4f5e11b">
+          <ID>Budget</ID>
+          <Name>Budget</Name>
+          <SourceColumnID>Budget</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="91c6365f-54cb-466e-a4ef-4442f434dfec">
+          <ID>Fact Id</ID>
+          <Name>Fact Id</Name>
+          <SourceColumnID>Fact Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="c97f2230-40cc-47dc-9c78-955bc0a6f2e1">
+          <ID>Genres Id</ID>
+          <Name>Genres Id</Name>
+          <SourceColumnID>Genres Id</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="9cffffcd-c4cf-411a-b711-3e447962f4f9">
+          <ID>Popularity</ID>
+          <Name>Popularity</Name>
+          <SourceColumnID>Popularity</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="8d222462-5f55-4e78-bb22-c91bab41c9b4">
+          <ID>Revenue</ID>
+          <Name>Revenue</Name>
+          <SourceColumnID>Revenue</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="21db0502-c994-4117-beb3-a556a0143102">
+          <ID>Vote Count</ID>
+          <Name>Vote Count</Name>
+          <SourceColumnID>Vote Count</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+    <MiningModel dwd:design-time-name="8ff50f13-df62-4ddb-8e78-370fa51c7437">
+      <ID>genres_reg</ID>
+      <Name>genres_reg</Name>
+      <CreatedTimestamp>0001-01-01T00:00:00Z</CreatedTimestamp>
+      <LastSchemaUpdate>0001-01-01T00:00:00Z</LastSchemaUpdate>
+      <LastProcessed>0001-01-01T00:00:00Z</LastProcessed>
+      <State>Unprocessed</State>
+      <Algorithm>Microsoft_Logistic_Regression</Algorithm>
+      <Columns>
+        <Column dwd:design-time-name="f37a96e1-acf7-45ef-b3a9-c57318cc5eba">
+          <ID>Budget</ID>
+          <Name>Budget</Name>
+          <SourceColumnID>Budget</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="9ba4464b-d548-4aa0-9e87-ec1066897e30">
+          <ID>Fact Id</ID>
+          <Name>Fact Id</Name>
+          <SourceColumnID>Fact Id</SourceColumnID>
+          <Usage>Key</Usage>
+        </Column>
+        <Column dwd:design-time-name="8603ed24-7d06-4217-bc6d-b67a931f29d8">
+          <ID>Genres Id</ID>
+          <Name>Genres Id</Name>
+          <SourceColumnID>Genres Id</SourceColumnID>
+          <Usage>PredictOnly</Usage>
+        </Column>
+        <Column dwd:design-time-name="987013de-c3cf-482d-b6d9-17bbf5ddfb58">
+          <ID>Popularity</ID>
+          <Name>Popularity</Name>
+          <SourceColumnID>Popularity</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="34ab0c95-145c-4e67-a79f-43ab944a677f">
+          <ID>Revenue</ID>
+          <Name>Revenue</Name>
+          <SourceColumnID>Revenue</SourceColumnID>
+        </Column>
+        <Column dwd:design-time-name="cff2b15a-2818-4410-b69e-7cea4b92b45c">
+          <ID>Vote Count</ID>
+          <Name>Vote Count</Name>
+          <SourceColumnID>Vote Count</SourceColumnID>
+        </Column>
+      </Columns>
+    </MiningModel>
+  </MiningModels>
+  <ddl100_100:HoldoutMaxPercent>30</ddl100_100:HoldoutMaxPercent>
+  <ddl100_100:HoldoutMaxCases>1000</ddl100_100:HoldoutMaxCases>
+</MiningStructure>

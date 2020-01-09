@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{D2ABAB84-BF74-430A-B69E-9DC6D40DDA17}") = "ssas 1912 final", "ssas 1912 final.dwproj", "{E0559CEB-A981-4498-9766-33FE4CA08596}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E0559CEB-A981-4498-9766-33FE4CA08596}.Development|Default.ActiveCfg = Development
+		{E0559CEB-A981-4498-9766-33FE4CA08596}.Development|Default.Build.0 = Development
+		{E0559CEB-A981-4498-9766-33FE4CA08596}.Development|Default.Deploy.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BEBA603C-EBF3-4BF2-AA9D-064D0C4F0D06}
+	EndGlobalSection
+EndGlobal

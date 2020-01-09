@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.852
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "ssis step 1 1312", "ssis step 1 1312.dtproj", "{507C08E7-7CBF-40E8-A682-883D63623973}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{507C08E7-7CBF-40E8-A682-883D63623973}.Development|Default.ActiveCfg = Development
+		{507C08E7-7CBF-40E8-A682-883D63623973}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {85839549-9C64-48C0-B79D-6D61D38013B0}
+	EndGlobalSection
+EndGlobal
