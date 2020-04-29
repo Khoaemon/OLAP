@@ -7,5 +7,5 @@ Data Warehouse for the Internet Movie Database (IMDB)
     c. Using analysis service (MDX) (minimum: 15 queries)
     d. Using analysis by Pivot table in Excel (minimum: 5 queries)
 3. SSRS services + Google Data Studio 
-    Link Google Data Studio:  https://datastudio.google.com/s/hohrZGk9q7s
+    3.1. Link Google Data Studio:  https://datastudio.google.com/s/hohrZGk9q7s
 4. Data mining
